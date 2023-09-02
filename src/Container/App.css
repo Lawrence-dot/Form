@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "CustomFont";
+  src: url('../Assets/fonts/Ubuntu-Regular.ttf');
+  font-weight: 500;
+}
+
+body {
+  font-family: 'CustomFont', sans-serif;
+}

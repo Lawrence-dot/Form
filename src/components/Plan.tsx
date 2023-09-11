@@ -15,9 +15,11 @@ function Plan(props: Props) {
     var plans: Element[] = Array.from(document.getElementsByClassName("plan"));
     plans.forEach((each) => {
       each.classList.remove("border-blue-700");
+      each.classList.remove("plan-blue");
       each.classList.remove("active");
       each.id === props.name && each.classList.add("border-blue-700");
       each.id === props.name && each.classList.add("active");
+      each.id === props.name && each.classList.add("plan-blue");
     });
   };
   return (
@@ -27,9 +29,9 @@ function Plan(props: Props) {
         props.click();
       }}
       id={props.name}
-      className="plan p-3  cursor-pointer sm:mx-2 flex flex-row sm:flex-col border w-fit rounded-md"
+      className="plan p-3  cursor-pointer sm:mx-2 flex sm:flex-col border w-fit rounded-md"
     >
-      <div className="plan-img my-2 mb-5">
+      <div className="plan-img md:my-2 md:mb-5">
         <img
           src={
             props.name === "Arcade"
@@ -43,10 +45,13 @@ function Plan(props: Props) {
       </div>
       <div className="flex flex-col ml-2 sm:ml-none">
         <span className="text-blue-900 font-bold m1-2"> {props.name} </span>
-        <span className="mb-2">
+        <span className="mb-2 font-light">
           {" "}
           ${props.amount}/{props.duration === "Yearly" ? "yr" : "mo"}
         </span>
+        {props.duration === "Yearly" && (
+          <span className="text-bluee text-sm"> 2 Months Free</span>
+        )}
       </div>
     </div>
   );

@@ -30,7 +30,7 @@ function Pick(props: Props) {
   return (
     <div
       id={props.name}
-      className="p-3 md:mx-2 pick flex flex-row my-2 border rounded-md"
+      className="p-3 pick flex flex-row my-2 border rounded-md"
     >
       <div className="pick-check my-2 mb-5">
         <input

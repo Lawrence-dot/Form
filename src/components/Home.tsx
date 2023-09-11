@@ -21,6 +21,7 @@ function Home() {
     navs.forEach((each) => {
       each.classList.remove("nav-active");
       each.id === `${num}` && each.classList.add("nav-active");
+      num === 5 && each.id === "4" && each.classList.add("nav-active");
     });
 
     pages.forEach((each) => {
@@ -31,7 +32,7 @@ function Home() {
 
   return (
     <Homecontext.Provider value={{ activeNav, verified, setverified }}>
-      <div className="body flex flex-col sm:flex-row">
+      <div className="body flex flex-col md:flex-row">
         <div className="sideNav">
           <Sidenav />
         </div>

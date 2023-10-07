@@ -5,9 +5,9 @@ function Sidenav() {
   const homecontext = useContext<hometype | null>(Homecontext);
 
   const erract = () => {
-    document.getElementById("nameinfo").classList.add("hidden");
-    document.getElementById("mailinfo").classList.add("hidden");
-    document.getElementById("phoneinfo").classList.add("hidden");
+    document.getElementById("nameinfo").classList.remove("hidden");
+    document.getElementById("mailinfo").classList.remove("hidden");
+    document.getElementById("phoneinfo").classList.remove("hidden");
   };
 
   return (

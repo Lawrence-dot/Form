@@ -4,12 +4,18 @@ import { Homecontext, hometype } from "./Home";
 function Sidenav() {
   const homecontext = useContext<hometype | null>(Homecontext);
 
+  const erract = () => {
+    document.getElementById("nameinfo").classList.add("hidden");
+    document.getElementById("mailinfo").classList.add("hidden");
+    document.getElementById("phoneinfo").classList.add("hidden");
+  };
+
   return (
     <div className="sidenav py-12 pb-14 justify-center md:justify-left flex  md:flex-col">
       <div
         className="nav flex-row flex text-white  h-13"
         onClick={() => {
-          homecontext?.verified > 0 && homecontext.activeNav(1);
+          homecontext?.verified > 0 ? homecontext.activeNav(1) : erract();
         }}
       >
         <div
@@ -26,7 +32,9 @@ function Sidenav() {
 
       <div
         className="nav flex-row flex text-white h-13"
-        onClick={() => homecontext?.verified > 1 && homecontext.activeNav(2)}
+        onClick={() =>
+          homecontext?.verified > 1 ? homecontext.activeNav(2) : erract()
+        }
       >
         <div
           id="2"
@@ -42,7 +50,9 @@ function Sidenav() {
 
       <div
         className="nav flex-row flex text-white h-13"
-        onClick={() => homecontext?.verified > 2 && homecontext.activeNav(3)}
+        onClick={() =>
+          homecontext?.verified > 2 ? homecontext.activeNav(3) : erract()
+        }
       >
         <div
           id="3"
@@ -58,7 +68,9 @@ function Sidenav() {
 
       <div
         className="nav flex-row flex text-white h-13"
-        onClick={() => homecontext?.verified > 3 && homecontext.activeNav(4)}
+        onClick={() =>
+          homecontext?.verified > 3 ? homecontext.activeNav(4) : erract()
+        }
       >
         <div
           id="4"

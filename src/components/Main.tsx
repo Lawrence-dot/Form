@@ -145,10 +145,10 @@ function Main() {
 
             <div className="info-form flex flex-col my-3">
               <div className="flex">
-                <span className="mb-2"> Phone Number </span>
+                <span className="mb-2"> Phone No </span>
                 <span className="ml-auto hidden text-red-700" id="phoneinfo">
                   {" "}
-                  Input a correct number{" "}
+                  Input a Valid number{" "}
                 </span>
               </div>
               <input

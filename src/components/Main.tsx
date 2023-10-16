@@ -154,7 +154,7 @@ function Main() {
               <input
                 className="info-input"
                 placeholder="Input Your Phone Number"
-                type="number"
+                type="tel"
                 ref={phoneref}
               />
             </div>
